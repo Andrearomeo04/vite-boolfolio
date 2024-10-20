@@ -1,20 +1,24 @@
 <script>
+import ProjectCard from './components/ProjectCard.vue'
 import axios from 'axios'
 
 export default {
-     data(){
-      return{
-        projects: []
-      }
-     }, methods:{
-      getProjects(){
-        axios.get('http://127.0.0.1:8000/api/projects').then((res) => {
-          console.log(res.data)
-        })
-      }
-     }, created(){
-      this.getProjects();
-     }
+  components: {
+    ProjectCard
+  },
+  data() {
+    return {
+      projects: []
+    }
+  }, methods: {
+    getProjects() {
+      axios.get('http://127.0.0.1:8000/api/projects').then((res) => {
+        console.log(res.data)
+      })
+    }
+  }, created() {
+    this.getProjects();
+  }
 }
 </script>
 <template>
@@ -24,7 +28,7 @@ export default {
         <div class="col-12">
           <h1 class="text-center">I miei progetti</h1>
         </div>
-        <div class="col-12">
+        <div class="row">
 
         </div>
       </div>
@@ -32,5 +36,5 @@ export default {
   </div>
 </template>
 <style lang="scss">
-  @import './styles/generals.scss'
+@import './styles/generals.scss'
 </style>
