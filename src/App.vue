@@ -1,4 +1,5 @@
 <script>
+import ProjectCard from './components/ProjectCard.vue';
 import ProjectCard from './components/ProjectCard.vue'
 import axios from 'axios'
 
@@ -29,12 +30,12 @@ export default {
           <h1 class="text-center">I miei progetti</h1>
         </div>
         <div class="row">
-
+          <ProjectCard v-for="project in projects" :key="project.id" />
         </div>
       </div>
     </div>
   </div>
 </template>
 <style lang="scss">
-@import './styles/generals.scss'
+@import './styles/generals.scss';
 </style>
