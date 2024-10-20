@@ -1,19 +1,20 @@
 <script>
 export default {
-
+    name: 'ProjectCard',
+    props: {
+        proj: Object
+    }
 }
 </script>
 <template>
-    <div>
-        <div class="col-4">
-            <div class="card">
-                <img class="img-fluid"
-                    :src="project.image != null ? 'http://127.0.0.1:8000/storage/${project.image}' : 'https://placehold.co/600x400?text=Immagine+copertina'"
-                    alt="">
-                <div class="card-content">
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
-                </div>
+    <div class="col-4 mb-3">
+        <div class="card">
+            <img class="img-fluid"
+                :src="proj.image != null ? `http://127.0.0.1:8000/storage/${proj.image}` : 'https://placehold.co/600x400?text=Immagine+copertina'"
+                alt="">
+            <div class="card-content">
+                <h3>{{ proj.title }}</h3>
+                <p>{{ proj.description }}</p>
             </div>
         </div>
     </div>
