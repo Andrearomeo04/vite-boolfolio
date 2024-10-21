@@ -9,10 +9,11 @@ export default {
             <div class="col-12 mt-3">
                 <ul class="d-flex list-unstyled justify-content-center">
                     <li class="me-3">
-                        <a href="#" class="text-decoration-none text-black">Home</a>
+                        <router-link :to="{ name: 'home' }" class="text-decoration-none text-black">Home</router-link>
                     </li>
                     <li>
-                        <a href="#" class="text-decoration-none text-black">Portfolio</a>
+                        <router-link :to="{ name: 'portfolio' }"
+                            class="text-decoration-none text-black">Portfolio</router-link>
                     </li>
                 </ul>
             </div>
