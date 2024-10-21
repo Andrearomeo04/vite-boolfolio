@@ -1,9 +1,12 @@
 <script>
+import AppHeader from './components/AppHeader.vue';
+import AppHeader from './components/AppHeader.vue';
 import ProjectCard from './components/ProjectCard.vue';
 import axios from 'axios'
 
 export default {
   components: {
+    AppHeader,
     ProjectCard
   },
   data() {
@@ -22,15 +25,14 @@ export default {
 }
 </script>
 <template>
-  <div>
-    <div class="container">
+  <AppHeader />
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <h1 class="text-center">I miei progetti</h1>
+      </div>
       <div class="row">
-        <div class="col-12 mb-4">
-          <h1 class="text-center">I miei progetti</h1>
-        </div>
-        <div class="row">
-          <ProjectCard v-for="project in projects" :key="project.id" :proj="project" />
-        </div>
+        <ProjectCard v-for="project in projects" :key="project.id" :proj="project" />
       </div>
     </div>
   </div>
