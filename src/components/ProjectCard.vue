@@ -17,8 +17,8 @@ export default {
                 <p>{{ proj.description }}</p>
             </div>
         </div>
+        <router-link class="btn btn-success"
+            :to="{ name: 'single-project', params: { slug: proj.slug } }">Visualizza</router-link>
     </div>
 </template>
-<style lang="">
-
-</style>
+<style lang="scss" scoped></style>
