@@ -1,6 +1,16 @@
 <script>
+import { store } from '../store'
+import axios from 'axios';
 export default {
-
+    data() {
+        return {
+            name: '',
+            surname: '',
+            email: '',
+            phone: '',
+            content: ''
+        }
+    },
 }
 </script>
 <template>
@@ -14,26 +24,30 @@ export default {
                     <div class="row">
                         <div class="col-12">
                             <label class="control-label">Nome</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Nome">
+                            <input type="text" class="form-control" name="name" id="name" v-model="name"
+                                placeholder="Nome">
                         </div>
                         <div class="col-12">
                             <label class="control-label">Cognome</label>
-                            <input type="text" class="form-control" name="surname" id="surname" placeholder="Cognome">
+                            <input type="text" class="form-control" name="surname" id="surname" v-model="surname"
+                                placeholder="Cognome">
                         </div>
 
                         <div class="col-12">
                             <label class="control-label">Email</label>
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                            <input type="text" class="form-control" name="email" id="email" v-model="email"
+                                placeholder="Email">
                         </div>
 
                         <div class="col-12">
                             <label class="control-label">Telefono</label>
-                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Telefono">
+                            <input type="text" class="form-control" name="phone" id="phone" v-model="phone"
+                                placeholder="Telefono">
                         </div>
 
                         <div class="col-12">
                             <label class="control-label">Contenuto</label>
-                            <textarea type="text" class="form-control" name="content" id="content"
+                            <textarea type="text" class="form-control" name="content" id="content" v-model="content"
                                 placeholder="Contenuto"></textarea>
                         </div>
                         <div class="col-12">
