@@ -11,9 +11,13 @@ export default {
                     <li class="me-3">
                         <router-link :to="{ name: 'home' }" class="text-decoration-none text-black">Home</router-link>
                     </li>
-                    <li>
+                    <li class="me-3">
                         <router-link :to="{ name: 'portfolio' }"
                             class="text-decoration-none text-black">Portfolio</router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'contacts' }"
+                            class="text-decoration-none text-black">Contatti</router-link>
                     </li>
                 </ul>
             </div>

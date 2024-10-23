@@ -42,7 +42,7 @@ export default {
                 <h1>Contatti</h1>
             </div>
             <div class="col-12">
-                <form action="post" @submit.prevent="sendform()">
+                <form action="post" @submit.prevent="sendForm()">
                     <div class="row">
                         <div class="col-12">
                             <label class="control-label">Nome</label>
