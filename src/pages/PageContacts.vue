@@ -4,13 +4,24 @@ import axios from 'axios';
 export default {
     data() {
         return {
+            store,
             name: '',
             surname: '',
             email: '',
             phone: '',
             content: ''
         }
-    },
+    }, methods: {
+        sendForm() {
+            const data = {
+                name: this.name,
+                surname: this.surname,
+                email: this.email,
+                phone: this.phone,
+                content: this.content,
+            }
+        }
+    }
 }
 </script>
 <template>
