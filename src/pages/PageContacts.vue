@@ -20,6 +20,17 @@ export default {
                 phone: this.phone,
                 content: this.content,
             }
+
+            axios.post(`${store.baseUrl}/contacts`, data).then((res) => {
+                if (res.data.success) {
+                    this.name = '';
+                    this.surname = '';
+                    this.email = '';
+                    this.phone = '';
+                    this.content = '';
+                }
+
+            })
         }
     }
 }

@@ -10,6 +10,10 @@ export const store = reactive({
         {
             name: 'portfolio',
             label: 'portfolio'
+        },
+        {
+            name: 'contacts',
+            label: 'contatti'
         }
     ]
 })
